@@ -12,20 +12,27 @@ class Tab2ViewController: UITabBarController {
 
     let singleton:Singleton = Singleton.sharedInstance
     
+    var numberArray2:[Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        var getSingletonTimes2 = singleton.getContents()
+        let getSingletonTimes2 = singleton.getContents()
         
-//        for get in getSingletonTimes2 {
-//            get = get * 2
-//        }
+
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            print("hirohiro")
-            print(getSingletonTimes2)
-               }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+//            print("hirohiro")
+//            print(getSingletonTimes2)
+//               }
+        
+        for get in getSingletonTimes2 {
+            let getting = get * 2
+            numberArray2.append(getting)
+        }
+        
+        print(numberArray2)
      
     }
     
