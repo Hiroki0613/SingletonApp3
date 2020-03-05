@@ -11,9 +11,9 @@ import Foundation
 
 class Data {
     
-    var contents: String
+    var contents: [Int]
 
-    init(contents: String) {
+    init(contents: [Int]) {
         self.contents = contents
     }
 
@@ -21,7 +21,7 @@ class Data {
 
 class Singleton: NSObject {
 
-    var data = Data(contents: "")
+    var data = Data(contents:[] )
     static let sharedInstance: Singleton = Singleton()
 
     private override init() {
@@ -30,12 +30,12 @@ class Singleton: NSObject {
     }
     
 
-    func saveContents(content: String) {
+    func saveContents(content: [Int]) {
         data.contents = content
     }
     
 
-    func getContents() -> String {
+    func getContents() -> [Int] {
         return data.contents
     }
     

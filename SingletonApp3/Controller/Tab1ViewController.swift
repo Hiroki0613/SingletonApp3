@@ -8,41 +8,33 @@
 
 import UIKit
 
-
-//すみません・・・、.textを入れるの忘れていました・・・。
-//Generic iOS Deviceしか左上で表示されていない状態です。
-
-//いえ、私が作成したものは大丈夫です。
-//またシミュレータを追加することが出来ない状態です。
-
 class Tab1ViewController: UITabBarController {
+        
+    var  numberArray = [0,1,2,3,4]
+    let singleton:Singleton = Singleton.sharedInstance
     
-    var array = Array()
-    
-    
-    @IBOutlet weak var textField: UITextField!
-    
-    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        singletonSave()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.singletonGet()
+        }
         
     }
     
 
+    func singletonSave() {
+        
+        
+        singleton.saveContents(content: numberArray)
+        
+    }
     
-    @IBAction func startSingleton1(_ sender: Any) {
-        let singleton :Singleton =  Singleton.sharedInstance
-               
-        guard let content = textField.text else { return }
-               
-        singleton.saveContents(content: content)
-        label.text = singleton.getContents()
-        array.arrayData.append(label.text!)
-        UserDefaults.standard.set(array, forKey: "arrayKey")
-        
-        
+    func singletonGet() {
+        print(singleton.getContents())
     }
     
 
