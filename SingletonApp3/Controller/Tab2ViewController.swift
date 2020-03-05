@@ -26,8 +26,6 @@ class Tab2ViewController: UITabBarController {
             print("hirohiro")
             print(getSingletonTimes2)
                }
-        
-        
      
     }
     
