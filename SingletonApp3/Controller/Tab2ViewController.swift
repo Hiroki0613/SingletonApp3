@@ -27,6 +27,7 @@ class Tab2ViewController: UITabBarController {
 //            print(getSingletonTimes2)
 //               }
         
+        
         for get in getSingletonTimes2 {
             let getting = get * 2
             numberArray2.append(getting)
