@@ -9,35 +9,64 @@
 import UIKit
 
 class Tab2ViewController: UITabBarController {
-
-    let singleton:Singleton = Singleton.sharedInstance
     
     var numberArray2:[Int] = []
+        
+    var tableView2:UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        let getSingletonTimes2 = singleton.getContents()
-        
-
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-//            print("hirohiro")
-//            print(getSingletonTimes2)
-//               }
-        
-        
-        for get in getSingletonTimes2 {
-            let getting = get * 2
-            numberArray2.append(getting)
+        Calc.multiplySingleton(multi: 2) { (numberArray) in
+            self.numberArray2 = numberArray
         }
         
         print(numberArray2)
-     
+        
+        
+        // テーブルのインスタンス
+        tableView2 = UITableView()
+        
+        // テーブルサイズを画面いっぱいに
+        tableView2.frame = view.frame
+        
+        //tableViewのdelegate
+        tableView2.delegate = self
+        tableView2.dataSource = self
+        
+        // セルをテーブルに紐付ける
+        tableView2.register(UITableViewCell.self, forCellReuseIdentifier: "Cell2")
+        
+        // データのないセルを表示しないようにするハック
+        tableView2.tableFooterView = UIView(frame: .zero)
+        
+        // テーブルを表示
+        view.addSubview(tableView2)
+
     }
     
-
-
-
+    
 }
+
+extension Tab2ViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return numberArray2.count
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "Cell2")
+        
+        cell.textLabel?.text = String(numberArray2[indexPath.row])
+        
+        return cell
+    }
+}
+

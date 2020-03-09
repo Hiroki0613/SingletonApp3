@@ -19,7 +19,7 @@
 		7F5EA34F2411493A00EAE822 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EA3442411493A00EAE822 /* Singleton.swift */; };
 		7F5EA3502411493A00EAE822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EA3452411493A00EAE822 /* ViewController.swift */; };
 		7F5EA3512411493A00EAE822 /* Calc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EA3462411493A00EAE822 /* Calc.swift */; };
-		7F5EA3522411493A00EAE822 /* TabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EA3472411493A00EAE822 /* TabTableViewController.swift */; };
+		7F5EA3522411493A00EAE822 /* Tab4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EA3472411493A00EAE822 /* Tab4ViewController.swift */; };
 		7F5EA3532411493A00EAE822 /* System in Resources */ = {isa = PBXBuildFile; fileRef = 7F5EA3482411493A00EAE822 /* System */; };
 		7F5EA3542411493A00EAE822 /* VC in Resources */ = {isa = PBXBuildFile; fileRef = 7F5EA3492411493A00EAE822 /* VC */; };
 /* End PBXBuildFile section */
@@ -39,7 +39,7 @@
 		7F5EA3442411493A00EAE822 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		7F5EA3452411493A00EAE822 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F5EA3462411493A00EAE822 /* Calc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calc.swift; sourceTree = "<group>"; };
-		7F5EA3472411493A00EAE822 /* TabTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabTableViewController.swift; sourceTree = "<group>"; };
+		7F5EA3472411493A00EAE822 /* Tab4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab4ViewController.swift; sourceTree = "<group>"; };
 		7F5EA3482411493A00EAE822 /* System */ = {isa = PBXFileReference; lastKnownFileType = folder; path = System; sourceTree = "<group>"; };
 		7F5EA3492411493A00EAE822 /* VC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VC; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,7 +104,7 @@
 				7F5EA3402411493A00EAE822 /* Tab1ViewController.swift */,
 				7F5EA3422411493A00EAE822 /* Tab2ViewController.swift */,
 				7F5EA3412411493A00EAE822 /* Tab3ViewController.swift */,
-				7F5EA3472411493A00EAE822 /* TabTableViewController.swift */,
+				7F5EA3472411493A00EAE822 /* Tab4ViewController.swift */,
 				7F5EA3452411493A00EAE822 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -191,7 +191,7 @@
 				7F5EA34A2411493A00EAE822 /* SceneDelegate.swift in Sources */,
 				7F5EA3502411493A00EAE822 /* ViewController.swift in Sources */,
 				7F5EA34E2411493A00EAE822 /* AppDelegate.swift in Sources */,
-				7F5EA3522411493A00EAE822 /* TabTableViewController.swift in Sources */,
+				7F5EA3522411493A00EAE822 /* Tab4ViewController.swift in Sources */,
 				7F5EA34D2411493A00EAE822 /* Tab2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

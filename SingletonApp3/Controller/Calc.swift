@@ -7,3 +7,21 @@
 //
 
 import Foundation
+
+class Calc {
+    
+    static func multiplySingleton(multi: Int, multiplyNumberArray:([Int]) -> Void  ) {
+        
+        let singleton:Singleton = Singleton.sharedInstance
+        let singletonMultiply = singleton.getContents()
+        
+        var afterMultiplyInt = [Int]()
+        
+        for multiplyNumber in singletonMultiply {
+            let afterMultiply = multiplyNumber * multi
+            afterMultiplyInt.append(afterMultiply)
+        }
+        
+        multiplyNumberArray(afterMultiplyInt)
+    }
+}
